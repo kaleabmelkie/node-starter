@@ -1,0 +1,54 @@
+{
+  "name": "swc-starter",
+  "version": "0.0.0",
+  "private": true,
+  "engines": {
+    "node": "14.x"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "typesVersions": {
+    "*": {
+      "index.d.ts": [
+        "dist/index.d.ts"
+      ]
+    }
+  },
+  "scripts": {
+    "prepare": "cross-env NODE_ENV=production npm-run-all -p check build -l --silent",
+    "clean": "del-cli dist **/*.tsbuildinfo",
+    "lint": "prettier --check src \"*.{json,js,cjs,ts}\" --ignore-path .gitignore",
+    "format": "prettier --check --write src \"*.{json,js,cjs,ts}\" --ignore-path .gitignore",
+    "check": "tsc -b",
+    "check:watch": "tsc -b -w --preserveWatchOutput",
+    "build": "swc src -d dist",
+    "build:watch": "swc src -d dist -w",
+    "test": "cross-env NODE_ENV=test jest --passWithNoTests",
+    "test:watch": "cross-env NODE_ENV=test jest --passWithNoTests -o --watch --silent",
+    "test:cov": "cross-env NODE_ENV=test jest --passWithNoTests --coverage",
+    "nodemon": "nodemon dist/main.js -q --ext js --watch dist",
+    "dev": "cross-env NODE_ENV=development npm-run-all -p check:watch build:watch nodemon -l --silent",
+    "prod": "cross-env NODE_ENV=production npm-run-all -p check build test -l --silent",
+    "start": "cross-env NODE_ENV=production node dist/main.js"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "devDependencies": {
+    "@swc/cli": "0.1.52",
+    "@swc/core": "1.2.112",
+    "@swc/jest": "0.2.9",
+    "@types/node": "14.x",
+    "chokidar": "3.5.2",
+    "cross-env": "7.0.3",
+    "del-cli": "4.0.1",
+    "jest": "27.3.1",
+    "nodemon": "2.0.15",
+    "npm-run-all": "4.1.5",
+    "prettier": "2.5.0",
+    "typescript": "4.5.2"
+  }
+}
