@@ -9,13 +9,7 @@
   "exports": {
     ".": "./dist/index.js"
   },
-  "typesVersions": {
-    "*": {
-      "index.d.ts": [
-        "dist/index.d.ts"
-      ]
-    }
-  },
+  "types": "./dist/index.d.ts",
   "scripts": {
     "prepare": "cross-env NODE_ENV=production npm-run-all -p check build -l --silent",
     "clean": "del-cli dist **/*.tsbuildinfo",
