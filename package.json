@@ -1,7 +1,8 @@
 {
-  "name": "swc-starter",
+  "name": "node-starter",
   "version": "0.1.0",
-  "private": true,
+  "license": "MIT",
+  "private": false,
   "engines": {
     "node": "14.x"
   },
@@ -11,18 +12,18 @@
   },
   "types": "./dist/index.d.ts",
   "scripts": {
-    "prepare": "cross-env NODE_ENV=production npm-run-all -p check build -l --silent",
+    "prepare": "cross-env NODE_ENV=production npm-run-all -s build -l --silent",
     "clean": "del-cli dist **/*.tsbuildinfo",
-    "lint": "prettier --check src \"*.{json,js,cjs,ts}\" --ignore-path .gitignore",
-    "format": "prettier --check --write src \"*.{json,js,cjs,ts}\" --ignore-path .gitignore",
-    "check": "tsc -b",
-    "check:watch": "tsc -b -w --preserveWatchOutput",
+    "lint": "prettier --check src \"*.{json,js,cjs,ts}\" --ignore-path \".gitignore\"",
+    "format": "prettier --check --write src \"*.{json,js,cjs,ts}\" --ignore-path \".gitignore\"",
     "build": "swc src -d dist",
     "build:watch": "swc src -d dist -w",
+    "check": "tsc -b",
+    "check:watch": "tsc -b -w --preserveWatchOutput",
     "test": "cross-env NODE_ENV=test jest --passWithNoTests",
     "test:watch": "cross-env NODE_ENV=test jest --passWithNoTests -o --watch --silent",
     "test:cov": "cross-env NODE_ENV=test jest --passWithNoTests --coverage",
-    "nodemon": "nodemon dist/main.js -q --ext js --watch dist",
+    "nodemon": "nodemon dist/main.js -q --ext js --watch ./dist/**/*",
     "dev": "cross-env NODE_ENV=development npm-run-all -p check:watch build:watch nodemon -l --silent",
     "prod": "cross-env NODE_ENV=production npm-run-all -p check build test -l --silent",
     "start": "cross-env NODE_ENV=production node dist/main.js"
@@ -32,17 +33,19 @@
     "singleQuote": true
   },
   "devDependencies": {
-    "@swc/cli": "0.1.52",
-    "@swc/core": "1.2.112",
-    "@swc/jest": "0.2.9",
+    "@swc/cli": "0.1.53",
+    "@swc/core": "1.2.119",
+    "@swc/core-linux-musl": "1.2.42",
+    "@swc/jest": "0.2.12",
     "@types/node": "14.x",
     "chokidar": "3.5.2",
     "cross-env": "7.0.3",
     "del-cli": "4.0.1",
-    "jest": "27.3.1",
+    "jest": "27.4.4",
     "nodemon": "2.0.15",
     "npm-run-all": "4.1.5",
-    "prettier": "2.5.0",
-    "typescript": "4.5.2"
+    "prettier": "2.5.1",
+    "tslib": "2.3.1",
+    "typescript": "4.5.3"
   }
 }
