@@ -39,6 +39,7 @@
     "@swc/core": "1.2.119",
     "@swc/core-linux-musl": "1.2.42",
     "@swc/jest": "0.2.12",
+    "@types/jest": "27.0.3",
     "@types/node": "14.x",
     "chokidar": "3.5.2",
     "cross-env": "7.0.3",

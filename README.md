@@ -1,6 +1,6 @@
 # node-starter
 
-A starter Node.js (native ESM) package using SWC, TypeScript, Jest, Nodemon, Prettier, and PNPM.
+A starter Node.js (native ESM) package using SWC, TypeScript, Jest, Nodemon, Prettier, Husky, PNPM, and GitHub Actions CI.
 
 ## Starter Setup
 

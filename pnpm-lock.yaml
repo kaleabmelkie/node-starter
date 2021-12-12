@@ -5,6 +5,7 @@ specifiers:
   '@swc/core': 1.2.119
   '@swc/core-linux-musl': 1.2.42
   '@swc/jest': 0.2.12
+  '@types/jest': 27.0.3
   '@types/node': 14.x
   chokidar: 3.5.2
   cross-env: 7.0.3
@@ -22,6 +23,7 @@ devDependencies:
   '@swc/core': 1.2.119
   '@swc/core-linux-musl': 1.2.42
   '@swc/jest': 0.2.12_@swc+core@1.2.119
+  '@types/jest': 27.0.3
   '@types/node': 14.18.0
   chokidar: 3.5.2
   cross-env: 7.0.3
@@ -862,6 +864,13 @@ packages:
     resolution: {integrity: sha512-c3mAZEuK0lvBp8tmuL74XRKn1+y2dcwOUpH7x4WrF6gk1GIgiluDRgMYQtw2OFcBvAJWlt6ASU3tSqxp0Uu0Aw==}
     dependencies:
       '@types/istanbul-lib-report': 3.0.0
+    dev: true
+
+  /@types/jest/27.0.3:
+    resolution: {integrity: sha512-cmmwv9t7gBYt7hNKH5Spu7Kuu/DotGa+Ff+JGRKZ4db5eh8PnKS4LuebJ3YLUoyOyIHraTGyULn23YtEAm0VSg==}
+    dependencies:
+      jest-diff: 27.4.2
+      pretty-format: 27.4.2
     dev: true
 
   /@types/minimist/1.2.2:
