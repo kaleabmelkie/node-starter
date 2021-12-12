@@ -1,12 +1,12 @@
 # node-starter
 
-A starter Node.js (native ESM) package using SWC, TypeScript, Prettier, Jest and PNPM.
+A starter Node.js (native ESM) package using SWC, TypeScript, Jest, Nodemon, Prettier, and PNPM.
 
 ## Starter Setup
 
 1. `pnpx degit kaleabmelkie/node-starter your-project-name`
 
-2. Configure the `name`, `version`, `license` and `private` fields in 'package.json'
+2. Configure the `name`, `version`, `license` and `private` fields in [package.json](package.json)
 
 3. Update this README to fit your project
 
