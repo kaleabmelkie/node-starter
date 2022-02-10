@@ -2,11 +2,14 @@ name: CI
 
 on:
   push:
+    branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 jobs:
-  build:
-    name: Build, lint, test, deploy (${{ matrix.os }}, Node ${{ matrix.node }})
+  run:
+    name: Build, check, lint, test (${{ matrix.os }}, Node ${{ matrix.node }})
 
     strategy:
       matrix:
