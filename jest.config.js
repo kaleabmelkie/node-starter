@@ -1,5 +1,6 @@
 export default {
   transform: {
-    '^.+\\.(t|j)sx?$': ['@swc/jest'],
+    '^.+\\.(t|j)s$': ['@swc/jest'],
   },
+  extensionsToTreatAsEsm: ['.ts'],
 }
