@@ -31,4 +31,4 @@ pnpm start
 
 Made with &hearts; in Addis Ababa.
 
-MIT License &copy; 2021 [Kaleab S. Melkie](https://kaleabmelkie.com/).
+MIT License &copy; 2022 [Kaleab S. Melkie](https://kaleabmelkie.com/).
